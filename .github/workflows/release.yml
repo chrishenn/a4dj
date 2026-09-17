@@ -39,7 +39,7 @@ jobs:
       - name: GitHub Release
         run: |
           gh release delete "${GITHUB_REF_NAME}" --repo ${{ github.repository }} || true
-          gh release create "${GITHUB_REF_NAME}" --repo ${{ github.repository }} --title "v${GITHUB_REF_NAME}" bins/a4dj.exe --notes "Automated release of v${GITHUB_REF_NAME}"
+          gh release create "${GITHUB_REF_NAME}" --repo ${{ github.repository }} --title "${GITHUB_REF_NAME}" bins/a4dj.exe --notes "Automated release of ${GITHUB_REF_NAME}"
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
