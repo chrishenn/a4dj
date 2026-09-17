@@ -10,7 +10,10 @@ steps {
   ["just"] = Builtins.just_format
   ["mise"] = Builtins.mise
   ["actionlint"] = Builtins.actionlint
-  ["zizmor"] = (Builtins.zizmor) { output_summary = "hide" }
+  ["zizmor"] = (Builtins.zizmor) {
+    fix = "zizmor --no-progress --fix=all {{files}}"
+    output_summary = "hide"
+  }
 
   ["check_case_conflict"] = Builtins.check_case_conflict
   ["check_merge_conflict"] = Builtins.check_merge_conflict

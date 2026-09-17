@@ -38,7 +38,7 @@ jobs:
           path: bins
       - name: GitHub Release
         run: |
-          gh release create "${GITHUB_REF_NAME}" bins/a4dj.exe --notes-from-tag
+          gh release create "${GITHUB_REF_NAME}" --repo ${{ github.repository }} --title "${GITHUB_REF_NAME}" bins/a4dj.exe --notes-from-tag
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 

@@ -10,6 +10,10 @@ zizmor = "latest"
 alias = 'f'
 run = 'hk fix --all'
 
+[tasks.check]
+alias = 'c'
+run = 'hk check --all'
+
 [tasks.release]
 description = "force-tag and push a version release"
 alias = "rel"
