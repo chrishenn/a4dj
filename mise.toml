@@ -1,3 +1,23 @@
 [tools]
+actionlint = "latest"
+gitleaks = "latest"
 hk = "latest"
 oxfmt = "latest"
+pkl = "latest"
+zizmor = "latest"
+
+[tasks.fix]
+alias = 'f'
+run = 'hk fix --all'
+
+[tasks.release]
+description = "force-tag and push a version release"
+alias = "rel"
+run = '''
+ver="$(cat ./version)"
+git add -A
+git commit -am "Automated release of: v$ver"
+git push
+git tag -a "v$ver" -m "Automated release of: v$ver" -f
+git push --tags -f
+'''
