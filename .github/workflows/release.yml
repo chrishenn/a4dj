@@ -35,10 +35,10 @@ jobs:
         uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
         with:
           name: a4dj.exe
-          path: bins
+          path: pkg
       - name: GitHub Release
         run: |
           gh release delete "${GITHUB_REF_NAME}" --repo ${{ github.repository }} || true
-          gh release create "${GITHUB_REF_NAME}" --repo ${{ github.repository }} --title "${GITHUB_REF_NAME}" bins/a4dj.exe --notes "Automated release of ${GITHUB_REF_NAME}"
+          gh release create "${GITHUB_REF_NAME}" pkg/* --repo ${{ github.repository }} --title "${GITHUB_REF_NAME}" --notes "Automated release of ${GITHUB_REF_NAME}"
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
