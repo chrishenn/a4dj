@@ -7,21 +7,21 @@
     "indentWidth": 2,
   },
   "markdown": {
-    "indentWidth": 2,
   },
   "toml": {
   },
   "yaml": {
-    "lineWidth": 240,
+    "printWidth": 240,
     "indentWidth": 2,
+    "quotes": "preferSingle",
   },
   "excludes": [
     "**/*-lock.json"
   ],
   "plugins": [
-    "npm:@dprint/json@0.24.0",
-    "npm:@dprint/markdown@0.24.0",
-    "npm:@dprint/toml@0.8.0",
-    "npm:dprint-plugin-yaml@0.6.0"
+    "https://plugins.dprint.dev/json-0.24.0.wasm",
+    "https://plugins.dprint.dev/markdown-0.24.0.wasm",
+    "https://plugins.dprint.dev/toml-0.8.0.wasm",
+    "https://plugins.dprint.dev/g-plane/pretty_yaml-v0.6.0.wasm",
   ]
 }

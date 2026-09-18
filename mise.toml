@@ -10,12 +10,12 @@ pkl = "latest"
 zizmor = "latest"
 
 [tasks.fix]
-alias = 'f'
-run = 'hk fix --all'
+alias = "f"
+run = "hk fix --all"
 
 [tasks.check]
-alias = 'c'
-run = 'hk check --all'
+alias = "c"
+run = "hk check --all"
 
 [tasks.release]
 description = "force-tag and push a version release"
