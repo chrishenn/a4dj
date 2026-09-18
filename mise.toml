@@ -1,9 +1,11 @@
 [tools]
 act = "latest"
 actionlint = "latest"
+dprint = "latest"
 gitleaks = "latest"
 hk = "latest"
 oxfmt = "latest"
+pinact = "latest"
 pkl = "latest"
 zizmor = "latest"
 

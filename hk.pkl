@@ -4,12 +4,14 @@ import "package://github.com/jdx/hk/releases/download/v2.0.1/hk@2.0.1#/Builtins.
 
 steps {
   ["oxfmt"] = Builtins.oxfmt
-
   ["pkl"] = Builtins.pkl
   ["pkl_format"] = Builtins.pkl_format
   ["just"] = Builtins.just_format
   ["mise"] = Builtins.mise
+
   ["actionlint"] = Builtins.actionlint
+  ["pinact"] = Builtins.pinact
+  ["pinact_update"] = Builtins.pinact_update
   ["zizmor"] = (Builtins.zizmor) {
     fix = "zizmor --no-progress --fix=all {{files}}"
     output_summary = "hide"

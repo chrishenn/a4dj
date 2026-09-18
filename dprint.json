@@ -1,0 +1,27 @@
+{
+  "lineWidth": 120,
+  "useTabs": false,
+  "indentWidth": 4,
+  "json": {
+    "lineWidth": 240,
+    "indentWidth": 2,
+  },
+  "markdown": {
+    "indentWidth": 2,
+  },
+  "toml": {
+  },
+  "yaml": {
+    "lineWidth": 240,
+    "indentWidth": 2,
+  },
+  "excludes": [
+    "**/*-lock.json"
+  ],
+  "plugins": [
+    "npm:@dprint/json@0.24.0",
+    "npm:@dprint/markdown@0.24.0",
+    "npm:@dprint/toml@0.8.0",
+    "npm:dprint-plugin-yaml@0.6.0"
+  ]
+}
